@@ -5,9 +5,9 @@ public class Figura{
     public double perimetro();
 
     //Constructor
-    public Figura(double area, double, perimetro){
+    public Figura(double area, double perimetro){
         this.area = area;
-        this. perimetro = perimetro;
+        this.perimetro = perimetro;
     }
 
     //Getters
