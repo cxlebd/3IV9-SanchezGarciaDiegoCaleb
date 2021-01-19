@@ -16,38 +16,39 @@ public class estudiantes
 {
 	public static void main(String[] ARGS)
 	{
-		Scanner obtener = new Scanner(System.in);
-		int estudiantes,i,notaMayor,notaMenor,nota,sumaNotas;
+		Scanner entrada = new Scanner(System.in);
+		int estudiantes,i,calificacionMayor,calificacionMenor,calificacion,sumaCalificaciones;
  
 		System.out.println("¿Cuantos estudiantes hay?");
-		estudiantes = obtener.nextInt();
+		estudiantes = entrada.nextInt();
  
-		notaMayor = 0;
-		notaMenor = 100;
-		sumaNotas = 0;
- 
+		calificacionMayor = 0;
+		calificacionMenor = 100;
+		sumaCalificaciones = 0;
+                
+             
  
 		for(i = 1; i <= estudiantes; i++)
 		{
 			System.out.println("Calificaciones del estudiante " + i + ": ");
-			nota = obtener.nextInt();
+			calificacion = entrada.nextInt();
  
-			sumaNotas = sumaNotas + nota;
-			if(nota > notaMayor)
+			sumaCalificaciones = sumaCalificaciones + calificacion;
+			if(calificacion > calificacionMayor)
 			{
-				notaMayor=nota;
+				calificacionMayor=calificacion;
 			}
-			if(nota < notaMenor)
+			if(calificacion < calificacionMenor)
 			{
-				notaMenor=nota;
+				calificacionMenor=calificacion;
 			}
 		}
- 
-		System.out.println("La calificacion mayor es: " + notaMayor + "\n");
-		System.out.println("La calificacion menor es: " + notaMenor + "\n");
+                                
+		System.out.println("La calificacion mayor es: " + calificacionMayor + "\n");
+		System.out.println("La calificacion menor es: " + calificacionMenor + "\n");
  
 		DecimalFormat df = new DecimalFormat("#.00");
  
-		System.out.println("El promedio es: " + df.format((double)sumaNotas/estudiantes) + "\n");
+		System.out.println("El promedio es: " + df.format((double)sumaCalificaciones/estudiantes) + "\n");
 	}
 }
